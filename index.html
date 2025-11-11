@@ -157,7 +157,14 @@ function showCodeBox() {
 function hideCodeBox() {
     document.getElementById('codeBox').style.display = 'none';
 }
-
+function copyText(elementId) {
+    const text = document.getElementById(elementId).innerText;
+    navigator.clipboard.writeText(text).then(() => {
+        alert('Copied to clipboard: ' + text);
+    }).catch(err => {
+        console.error('Failed to copy: ', err);
+    });
+}
 // Google Translate
 function googleTranslateElementInit() {
     new google.translate.TranslateElement({
@@ -170,3 +177,4 @@ function googleTranslateElementInit() {
 <script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 </body>
 </html>
+
