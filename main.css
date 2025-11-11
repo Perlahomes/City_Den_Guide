@@ -170,6 +170,11 @@ body, html {
     #main-heading{font-size:1.5rem;}
     .open-btn{padding:8px 14px; font-size:18px;}
 }
+@media (max-width: 768px) {
+    .open-btn {
+        top: 80px; /* Move lower on mobile */
+    }
+}
 /* Allow sidebar text to be copyable */
 .copyable-text {
     user-select: text;  /* Users can select/copy */
@@ -189,4 +194,5 @@ body, html {
 .copy-btn:hover {
     background-color: #cbb37c;
 }
+
 
